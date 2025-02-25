@@ -1,44 +1,78 @@
 # PDFCombinerPY from dflopez
-Toma PDF's y los combina
 
-# Instalación en Windows
+Takes PDFs and combines them
 
-## Instalaciones requeridas
+## Installation on Windows
 
-```pip install PyPDF2 reportlab pdf2image Pillow colorama```	
+### Required Installations
 
-Descargar e instalar Poppler:
- 
--Ve a https://github.com/oschwartz10612/poppler-windows/releases.  
--Descarga la última versión de poppler para Windows (por ejemplo, poppler-23.11.0.zip).  
--Extrae el archivo ZIP en una carpeta, por ejemplo: C:\poppler.  
--Agrega la carpeta bin de poppler a tu variable de entorno PATH:  
--Haz clic derecho en "Este equipo" o "Mi PC" y selecciona "Propiedades".  
--Haz clic en "Configuración avanzada del sistema".  
--En la pestaña "Opciones avanzadas", haz clic en "Variables de entorno".  
--En "Variables del sistema", busca la variable PATH y haz clic en "Editar".  
--Agrega la ruta a la carpeta bin de poppler, por ejemplo: C:\poppler\bin.  
--Haz clic en "Aceptar" para guardar los cambios.  
+```sh
+pip install PyPDF2 reportlab pdf2image Pillow colorama
+```
+or
+```sh
+pip install -r requirements.txt
+```
 
-# Instalación en MacOs
+#### Download and install Poppler:
 
-## Instalaciones requeridas
-### En el path del script, ejecutar los siguientes comandos:
-```python3 -m venv venv``` (Creará el entorno virtual para Python).  
-```source venv/bin/activate``` (Activará el entorno virtual).  
-```pip install PyPDF2 reportlab pdf2image Pillow colorama``` (Instalará las librerías necesarias para la ejecución del script, también mencionadas en el archivo requirements).
+1. Go to [Poppler releases](https://github.com/oschwartz10612/poppler-windows/releases).
+2. Download the latest version of Poppler for Windows (e.g., `poppler-23.11.0.zip`).
+3. Extract the ZIP file into a folder, e.g., `C:\poppler`.
+4. Add the Poppler `bin` folder to your environment variable `PATH`:
+   - Right-click on "This PC" or "My Computer" and select "Properties".
+   - Click on "Advanced system settings".
+   - In the "Advanced" tab, click on "Environment Variables".
+   - Under "System variables", find the `PATH` variable and click "Edit".
+   - Add the path to the Poppler `bin` folder, e.g., `C:\poppler\bin`.
+   - Click "OK" to save the changes.
 
-```deactivate``` (Para cerrar el entorno virtual, cuando se termine de utilizar el script).
+## Installation on macOS
 
-# Pasos para usar
-### Debe crear en el mismo path del script las carpetas "input" y "output".  
--En input debe ir el/los PDF's a combinar.  
--En output se generará el PDF combinado.  
--```python combine_pdfs.py``` (En Windows para ejecutar el script).  
--```python3 combine_pdfs.py``` (En MacOs con el entorno virtual activado para ejecutar el script).
+### Required Installations
 
-### Notas
--El DPI se puede variar para la calidad requerida, todo depende de los recursos de la máquina. 
+#### In the script path, run the following commands:
+- **Creates a virtual environment for Python**
+    ```sh
+    python3 -m venv venv 
+    ```
+- **Activates the virtual environment**
+    ```sh
+    source venv/bin/activate
+    ```
+- **Installs the necessary libraries**
+    ```sh
+    pip install PyPDF2 reportlab pdf2image Pillow colorama
+    ```
+- **or**
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+To deactivate the virtual environment:
+```sh
+deactivate
+```
+
+## Steps to Use
+
+### Create the following folders in the same path as the script:
+- `input`: This folder should contain the PDFs to be combined.
+- `output`: The combined PDF will be generated here.
+
+### Run the script:
+- **On Windows**:
+  ```sh
+  python combine_pdfs.py
+  ```
+- **On macOS** (with the virtual environment activated):
+  ```sh
+  python3 combine_pdfs.py
+  ```
+
+### Notes
+- The DPI can be adjusted for the required quality, depending on the machine's resources.
+- In the initial version, it works with the input PDFs grouped into a single file.
 
 
 ![alt text](https://www.python.org/static/img/python-logo.png)
